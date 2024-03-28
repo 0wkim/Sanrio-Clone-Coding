@@ -1,15 +1,23 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
 
 * {
     margin: 0px;
     padding: 0px;
     list-style: none;
     text-decoration: none;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat",'NanumBarunGothic', sans-serif;
     font-size: 16px;
-    color: #000;
-    font-weight: 600;
+    color: #222;
+    font-weight: 500;
 }
 
 header {
@@ -55,7 +63,6 @@ ul > li {
 #slider {
     width: 100%;
     height: 100vh;
-    background-color: aqua;
 }
 #slider > img {
     width: 100%;
@@ -66,14 +73,95 @@ ul > li {
 #character {
     width: 100%;
     height: 100vh;
-    background-color: yellow;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 #character > h1 {
     font-size: 50px;
     margin: 80px 0px 30px;
-    font-weight: 600;
+}
+
+.click {
+    width: 220px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #000;
+    border-radius: 220px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.click:hover {
+    background-color: #000;
+}
+.click:hover > a {
+    color: #fff;
+}
+
+.click > a {
+    font-weight: 200;
+    color: #222;
+    font-size: 12px;
+}
+
+article {
+    width: 1300px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+article > div {
+    width: 285px;
+    height: 290px;
+    border: 1px solid #ebebeb;
+    margin: -0px 10px;
+    border-radius: 10%;
+    z-index: 1;
+}
+
+.img {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img > img {
+    width: 120%;
+    object-fit: fill;
+    padding: 10%;
+    box-sizing: border-box;
+}
+
+.text {
+    width: 100%;
+    height: 25%;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 5px;
+}
+
+.text h1 {
+    font-size: 24px;
+    color: #444;
+    font-weight: 400;
+}
+
+.text span {
+    font-size: 12px;
+    color: #ccc;
+    font-weight: 400;
+}
+
+#char2 {
+    margin-top: -150px;
 }
